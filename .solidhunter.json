@@ -1,0 +1,8 @@
+{
+    "name": "solidhunter",  "rules": [
+      {
+        "id": "func-name-mixedcase",
+        "severity": "ERROR"
+      }
+    ]
+}
