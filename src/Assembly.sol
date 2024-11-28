@@ -9,17 +9,6 @@ contract AssemblyMath {
         }
     }
 
-    function yul_mul(uint256 x, uint256 y) public pure returns (uint256 z) {
-        assembly {
-            switch x
-            case 0 { z := 0 }
-            default {
-                z := mul(x, y)
-                if iszero(eq(div(z, x), y)) { revert(0, 0) }
-            }
-        }
-    }
-
     // Round to nearest multiple of b
     function yul_fixed_point_round(uint256 x, uint256 b)
         public
